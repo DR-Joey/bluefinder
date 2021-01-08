@@ -14,7 +14,6 @@ import Vehicle from "Routes/Vehicle";
 import styled from "styled-components";
 const Container = styled.div`
   padding-top: 55px;
-  padding-left: 70px;
 `;
 export default () => (
   <Router>

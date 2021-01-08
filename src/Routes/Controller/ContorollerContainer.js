@@ -25,7 +25,7 @@ export default class extends React.Component {
 
   render() {
     const { result, error, loading } = this.state;
-    console.log("imhere");
+
     return (
       <ControllerPresenter result={result} error={error} loading={loading} />
     );

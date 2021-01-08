@@ -14,13 +14,28 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   background-color: rgba(20, 20, 20, 0.8);
+  z-index: 1;
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.8);
+`;
+const Routes = styled.header`
+  color: white;
+  position: fixed;
+  top: 50;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(20, 20, 20, 0.8);
   z-index: 10;
   box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.8);
 `;
 
 const Item = styled.div`
-  width: 80px;
-  height: 50px;
+  width: 60px;
+  font-size: 12px;
+  height: 40px;
   text-align: center;
   border-bottom: 3px solid
     ${(props) => (props.current ? "#3498db" : "transparent")};
@@ -36,6 +51,7 @@ const SLink = styled(Link)`
 
 const LogoContainer = styled.div`
   display: flex;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   font-size: 30px;
@@ -53,32 +69,33 @@ const Logo = styled.div`
 //Header - Left
 const Left = styled.div`
   display: flex;
+  flex: 1 1;
 `;
 //Header - Center
 const Center = styled.div`
   display: flex;
-  width: 300px;
+  flex: 1 1;
 `;
 
 //Header - Right
 const Right = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 300px;
+  flex-grow: 1;
 `;
 //Header - Left,Center,Right
 const Nav = styled.div`
   height: 55px;
   background-color: #202020;
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
   color: white;
 `;
 
 export default withRouter(({ location: { pathname } }) => (
-  <Header>
-    <Nav>
+  <>
+    <Header>
       <Left>
         <SLink to="/">
           <LogoContainer>
@@ -90,6 +107,8 @@ export default withRouter(({ location: { pathname } }) => (
       <Center>
         <Search />
       </Center>
+    </Header>
+    <Routes>
       <Right>
         <Item current={pathname === "/"}>
           <SLink to="/">Home</SLink>
@@ -104,6 +123,6 @@ export default withRouter(({ location: { pathname } }) => (
           <SLink to="/vehicle">Vehicle</SLink>
         </Item>
       </Right>
-    </Nav>
-  </Header>
+    </Routes>
+  </>
 ));
