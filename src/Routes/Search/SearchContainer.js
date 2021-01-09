@@ -9,7 +9,7 @@ import {
 } from "@apollo/client";
 const cache = new InMemoryCache();
 const link = createHttpLink({
-  uri: "http://localhost:4000/",
+  uri: "https://codefinder2.herokuapp.com/",
 });
 const client = new ApolloClient({
   // Provide required constructor fields

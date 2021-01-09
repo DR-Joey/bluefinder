@@ -1,0 +1,4 @@
+﻿id,controller,code,description,condition,resetcondition,msgkor,msgeng
+1,VCU,C1EF003,BatteryVolatage Circuit Voltage Out of Range(too high),IG ON,IG ON,보조배터리전압높음,Battery Voltage High
+2,VCU,C1EF004,BatteryVolatage Circuit Voltage Out of Range(too low),IG ON,IG ON,보조배터리전압낮음,Battery Voltage Low
+3,VCU,C1EF2D3,MCU EVR13 Voltage Out of Range,IG ON,IG ON,VCU MCU 전압 높음,VCU MCU Voltage High
